@@ -11,6 +11,9 @@ setTimeout(function(){
 	gsap.timeline()
 	.from(".jb-image", { duration: 1, delay: 1, opacity: 0, x: 50 })
 	.to(".jb-image", {duration: 1, opacity: 1, });
+	gsap.timeline()
+	.from(".navbar-toggler", { duration: 1, delay: 1, opacity: 0, y: -20 })
+	.to(".navbar-toggler", {duration: 1, opacity: 1, });
 	
 	const navLink = Array.from(document.getElementsByClassName('nav-item'));
 	let duration =1
@@ -19,6 +22,9 @@ setTimeout(function(){
 		.from(n, { duration: duration += 0.2, delay: 1, opacity: 0, y: -50 })
 		.to(n, {duration: 1, opacity: 1, });
 })
-	
+
+gsap.timeline().to('#loading', {css:{zIndex:-1}})
+gsap.timeline().to('#particles-js', {css:{zIndex:-1}})
+
 }, 1500)
 

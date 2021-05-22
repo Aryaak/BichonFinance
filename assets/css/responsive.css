@@ -1,0 +1,66 @@
+ /* X-Small devices (portrait phones, less than 576px) */
+ /* No media query for `xs` since this is the default in Bootstrap */
+
+ /* Very Small devices (landscape phones, 576px and down) */
+
+ @media (max-width: 576px) {
+
+     body {
+         padding: 5px 20px;
+     }
+
+     #logo h3 {
+         font-size: 0.8rem;
+     }
+
+     #logo img {
+         width: 2em;
+     }
+
+     .navbar-nav {
+         text-align: center;
+     }
+
+     .nav-link {
+         margin: auto;
+     }
+
+     .jb-text h4 {
+         font-size: 1em;
+     }
+
+     .jumbotron>div {
+         flex-wrap: wrap;
+     }
+
+     .jb-text {
+         order: 2;
+     }
+
+     .jb-image img {
+         display: block;
+         margin: auto;
+         width: 18em;
+         margin-bottom: 25px;
+     }
+
+     .nav-link {
+         font-size: 0.8em;
+     }
+ }
+
+
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) {}
+
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) {}
+
+ /* Large devices (desktops, 992px and up) */
+ @media (min-width: 992px) {}
+
+ /* X-Large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+ @media (min-width: 1400px) {}
