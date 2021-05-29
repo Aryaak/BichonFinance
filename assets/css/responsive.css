@@ -47,6 +47,44 @@
      .nav-link {
          font-size: 0.8em;
      }
+
+     .page {
+         margin-bottom: 0.8em;
+     }
+
+     .page-title {
+         font-size: 1em;
+     }
+
+     #about_us .d-flex div {
+         width: 100% !important;
+         flex-basis: 100% !important;
+         margin-bottom: 20px;
+     }
+
+     #about_us .d-flex {
+         flex-wrap: wrap;
+     }
+
+     p {
+         font-size: 0.8em;
+     }
+
+     button {
+         display: inline;
+         transform: scale(0.7);
+         margin: 0 !important;
+     }
+
+     .timeline {
+         margin-top: 50px;
+     }
+
+     .timeline h2,
+     .timeline p {
+
+         font-size: 0.5em !important;
+     }
  }
 
 

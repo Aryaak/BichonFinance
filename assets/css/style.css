@@ -12,6 +12,52 @@ body {
 
 /* End CSS Reset */
 
+/* Bootstrap Replace */
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: black !important;
+    border: 3px solid black !important;
+    box-shadow: none !important;
+    border-radius: 100px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.mr-10px {
+    margin-right: 10px;
+}
+
+.ms-20px {
+    margin-left: 100px;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active {
+    box-shadow: none !important;
+    border-radius: 5px !important;
+    font-weight: 500 !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+.btn-secondary:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* End Bootstrap Replace */
+
 /* Loading Style */
 
 #loading {
@@ -166,3 +212,179 @@ header {
 }
 
 /* End Header Style */
+
+/* Main Style */
+
+.page {
+    margin-bottom: 150px;
+}
+
+/* About us Style */
+
+
+
+/* End About us Style */
+
+/* Roadmap Style */
+
+.main-timeline {
+    position: relative;
+    z-index: 1;
+}
+
+.main-timeline:before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: black;
+    margin: 0 auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.main-timeline .timeline {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.main-timeline .timeline:before,
+.main-timeline .timeline:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.main-timeline .timeline-content {
+    width: 48%;
+    padding: 0 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.main-timeline .timeline-icon {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 17px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+.main-timeline .date {
+    display: inline-block;
+    padding: 2px 5px;
+    background: black;
+    font-size: 16px;
+    color: #fff;
+}
+
+.main-timeline .timeline-content.left .date {
+    margin-right: -4px;
+}
+
+.main-timeline .timeline-content.right .date {
+    margin-left: -4px;
+}
+
+.main-timeline .title {
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #333;
+    border: 2px dotted black;
+}
+
+.main-timeline .description {
+    padding: 20px;
+    background: rgb(254, 254, 254);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+}
+
+.main-timeline .timeline-content.left {
+    text-align: right;
+}
+
+.main-timeline .timeline-content.right {
+    float: right;
+}
+
+
+@media screen and (max-width: 767px) {
+    .main-timeline:before {
+        left: 0;
+        margin: 0;
+    }
+
+    .main-timeline .timeline-content {
+        width: 90%;
+        float: right;
+    }
+
+    .main-timeline .timeline-icon {
+        margin: 0;
+        left: -6px;
+    }
+
+    .main-timeline .timeline-content.left {
+        text-align: left;
+    }
+}
+
+.active .timeline-icon {
+    border: none;
+    background-color: black;
+    box-shadow: 0 0 0 2px white, 0 0 0 5px black;
+}
+
+.list-tl {
+    list-style: none;
+}
+
+.list-tl li {
+    margin: 10px 20px;
+}
+
+
+
+.list-tl li::after {
+    content: "";
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+
+/* End Roadmap Style */
+
+/* End Main Style */
+
+/* Footer Style */
+
+.join-text {
+    margin-left: 10px;
+    word-spacing: 10px;
+}
+
+/* End Footer Style */
