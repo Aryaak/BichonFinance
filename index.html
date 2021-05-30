@@ -312,8 +312,8 @@
                             class="bi bi-telegram"></i></a>
                     <a href="https://t.co/ZIzIyPwIHM?amp=1" target="_blank" class="text-dark"><i
                             class="bi bi-people-fill"></i></a></span></p>
-            <p>2021 &copy; Corgidoge All rights reserved.</p>
-            <p class="bold">Privacy Policy</p>
+            <p class="mb-0">2021 &copy; Corgidoge All rights reserved.</p>
+            <p class="bold mb-0">Privacy Policy</p>
             <p>contact@corgidoe.com</p>
         </div>
 
@@ -329,7 +329,7 @@
     <script src="./assets/js/particles-config.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="./assets/js/gsap.js"></script>
-    <script src="./assets/js/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
@@ -343,15 +343,15 @@
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [300, 50, 100],
+                    data: [30, 35, 35, 0],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
                         'rgb(255, 205, 86)',
                         'rgb(39, 174, 96)',
                     ],
-                    circumference: ['100'],
-                    hoverOffset: 10
+                    weight: 1,
+                    hoverOffset: 15
                 }]
             },
 

@@ -339,12 +339,38 @@ header {
 
     .main-timeline .timeline-icon {
         margin: 0;
-        left: -6px;
+        left: -1.5em;
     }
 
     .main-timeline .timeline-content.left {
         text-align: left;
     }
+
+    .list-tl {
+        padding-left: 0;
+    }
+
+    .list-tl li {
+        margin-left: 2em !important;
+    }
+
+    .list-tl li::after {
+        content: "";
+        display: none;
+    }
+
+    .list-tl li::before {
+        content: "";
+        position: absolute;
+        margin-top: 4px;
+        margin-left: -2em;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+
 }
 
 .active .timeline-icon {
@@ -375,8 +401,21 @@ header {
     border-radius: 50%;
 }
 
-
 /* End Roadmap Style */
+
+/* Token Style */
+
+canvas {
+    margin-top: -150px;
+    transform: scale(0.5);
+}
+
+
+#token {
+    margin-bottom: 80px;
+}
+
+/* End Token Style */
 
 /* End Main Style */
 

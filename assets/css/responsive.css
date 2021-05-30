@@ -85,6 +85,60 @@
 
          font-size: 0.5em !important;
      }
+
+     .page {
+         margin-bottom: 10em;
+     }
+
+     #token h4,
+     #token li {
+         font-size: 1em;
+     }
+
+     #token .container {
+         flex-wrap: wrap;
+     }
+
+     #token .container>div {
+         flex-basis: 100%;
+     }
+
+     canvas {
+         margin-top: -80px;
+         transform: scale(0.5);
+     }
+
+
+     #presale .container {
+         flex-wrap: wrap;
+     }
+
+     #presale .container>div {
+         flex-basis: 100%;
+     }
+
+     #presale .container>div h2 {
+         margin-bottom: 5px !important;
+     }
+
+     #presale button {
+         width: 100% !important;
+         margin-left: auto;
+     }
+
+     #presale .container>div:first-of-type {
+         margin-bottom: 20px;
+
+     }
+
+     #presale .container>div:first-of-type div {
+         margin-left: 1.5em !important;
+         padding-left: 1.5em !important;
+     }
+
+     #presale p {
+         margin-bottom: 0;
+     }
  }
 
 
