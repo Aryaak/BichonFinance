@@ -153,7 +153,39 @@
 
 
  /* Small devices (landscape phones, 576px and up) */
- @media (min-width: 576px) {}
+ @media (max-width: 1000px) {
+
+     .jumbotron>div {
+         flex-wrap: wrap;
+     }
+
+
+     .jb-text {
+         order: 2;
+         margin-top: 50px !important;
+     }
+
+     .jb-image img,
+     #about_us img {
+         display: block;
+         margin: auto;
+         width: 18em;
+         margin-bottom: 25px;
+     }
+
+     #about_us .d-flex {
+         flex-wrap: wrap;
+     }
+
+     #about_us .d-flex * {
+         flex-basis: 100%;
+     }
+
+     canvas {
+         margin-top: -10vh;
+         transform: scale(0.5);
+     }
+ }
 
  /* Medium devices (tablets, 768px and up) */
  @media (min-width: 768px) {}
