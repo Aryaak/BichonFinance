@@ -15,7 +15,10 @@
 
 <body>
 
-    <button id="scroll-btn" class="btn btn-primary" onclick="topFunction()"><i class="bi bi-shift-fill"></i></button>
+    <div onclick="topFunction()">
+        <button id="scroll-btn" class="btn btn-primary"><i class="bi bi-shift-fill"></i></button>
+    </div>
+
 
     <!-- Loading -->
 
@@ -36,11 +39,11 @@
 
     <!-- Header -->
 
-    <header>
+    <header id="home" class="section">
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3">
             <div class="container d-flex justify-content-between">
-                <a id="logo" class="navbar-brand d-flex align-items-center justify-content-between" href="#">
+                <a id="logo" class="navbar-brand d-flex align-items-center justify-content-between" href="./">
                     <img src="./assets/img/logo.png" alt="Logo" width="80px">
                     <h3>Bichon Finance</h3>
                 </a>
@@ -51,19 +54,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active">HOME</a>
+                            <a class="nav-link active home-link" onclick="topFunction()">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="goToByScroll('about_us')">ABOUT US</a>
+                            <a class="nav-link about_us-link" onclick="goToByScroll('about_us')">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="goToByScroll('roadmap')">ROADMAP</a>
+                            <a class="nav-link roadmap-link" onclick="goToByScroll('roadmap')">ROADMAP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="goToByScroll('token')">TOKEN</a>
+                            <a class="nav-link token-link" onclick="goToByScroll('token')">TOKEN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="goToByScroll('join_us')">JOIN US</a>
+                            <a class="nav-link join_us-link" onclick="goToByScroll('join_us')">JOIN US</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +87,8 @@
                         Itaque, similique facilis! Dolor velit amet aliquam delectus alias animi magni iure? Hic
                         voluptatibus
                         ipsum autem.</h4>
-                    <a href="./presale.html"> <button class="btn btn-primary mt-4">JOIN OUR PRESALE</button>
+                    <a id="presale-link" href="./presale.html"> <button id="presale-btn"
+                            class="btn btn-primary mt-4">JOIN OUR PRESALE</button>
                     </a>
                 </div>
                 <div class="jb-image">
@@ -108,11 +112,11 @@
 
         <!-- About Us -->
 
-        <div id="about_us" class="page">
+        <div id="about_us" class="page section">
             <h3 class="text-center mb-5 page-title">ABOUT US</h3>
             <div class="container d-flex justify-content-between">
                 <div>
-                    image
+                    <img src="./assets/img/jb-img.png" alt="Jumbotron Image" width="600px">
                 </div>
                 <div class="w-50">
                     <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit explicabo tempora
@@ -132,7 +136,7 @@
 
         <!-- Rodmap -->
 
-        <div id="roadmap" class="page">
+        <div id="roadmap" class="page section">
             <h3 class="text-center mb-5 page-title">ROADMAP</h3>
             <!-- Timeline -->
             <div class="main-timeline container">
@@ -226,7 +230,7 @@
 
         <!-- Token -->
 
-        <div id="token" class="page">
+        <div id="token" class="page section">
             <div class="mb-5 text-center">
                 <h3 class=" page-title">TOKEN</h3>
                 <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small>
@@ -260,7 +264,7 @@
 
     <!-- Footer -->
 
-    <footer>
+    <footer id="join" class="section">
         <div id="join_us" class="container text-center mb-5">
             <p class="bold text-dark">JOIN US ON <span class="join-text"> <a href="https://twitter.com/BichonFinance"
                         target="_blank" class="text-dark"><i class="bi bi-twitter"></i></a> <a
@@ -289,10 +293,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
 
+        let navLinks = Array.from(document.getElementsByClassName('nav-link'));
+        let navClick = false;
+        navLinks.forEach(function (nav) {
+            navLinks.forEach(function (nav) {
+                nav.classList.remove('active');
+            })
+            nav.addEventListener('click', function () {
+                navClick = true;
+                navLinks.forEach(function (nav) {
+                    nav.classList.remove('active');
+                })
+                nav.classList.add('active');
+                setTimeout(function () { navClick = false; }, 1000)
+            })
+
+        })
+
         //Get the button:
         mybutton = document.getElementById("scroll-btn");
         nav = document.getElementsByTagName('nav')[0];
-        console.log(nav);
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () { scrollFunction() };
@@ -314,11 +334,11 @@
         }
         function goToByScroll(id) {
             const navs = Array.from($('nav-link'));
-            console.log(navs);
             $('html,body').animate({ scrollTop: $("#" + id).offset().top }, 'fast');
             navs.forEach((elm) => {
                 console.log(elm);
             })
+
         }
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
@@ -345,10 +365,24 @@
             },
 
         });
+        $(document).scroll(function () {
+            $('.section').each(function () {
+                if ($(this).position().top - 100 <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
+                    if (!navClick) {
+                        let activeNav = document.getElementsByClassName($(this).attr('id') + '-link')[0];
+                        navLinks.forEach(function (nav) {
+                            nav.classList.remove('active');
+                        })
 
-        const navLinks = document.getElementsByClassName('.nav-link');
+                        activeNav.classList.add('active');
+                    }
+
+                }
+            });
+        });
+
     </script>
-
+    <script src="./assets/js/presale.js"></script>
 </body>
 
 </html>

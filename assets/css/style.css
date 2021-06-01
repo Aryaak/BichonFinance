@@ -169,9 +169,12 @@ html {
     right: 2%;
     bottom: 5%;
     display: none;
+    z-index: 9999;
 }
 
 #scroll-btn:hover {
+    background-color: black !important;
+    color: white !important;
     border-radius: 0;
 }
 
@@ -186,13 +189,11 @@ html {
     z-index: 1;
 }
 
-header {
-    height: 100vh;
-}
 
 .presale-header {
-    height: 10vh;
+    height: 0;
 }
+
 
 
 .buy-header {
@@ -405,6 +406,7 @@ header {
         text-align: left;
     }
 
+
     .list-tl {
         padding-left: 0;
     }
@@ -443,8 +445,10 @@ header {
 }
 
 .list-tl li {
+    position: relative;
     margin: 10px 20px;
 }
+
 
 
 
@@ -458,6 +462,14 @@ header {
     background-color: white;
     border: 2px solid black;
     border-radius: 50%;
+}
+
+.timeline-content.right .list-tl li::after {
+    left: -30px;
+}
+
+.timeline-content.right .list-tl li {
+    margin-left: -15px;
 }
 
 /* End Roadmap Style */

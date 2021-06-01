@@ -37,7 +37,8 @@
          order: 2;
      }
 
-     .jb-image img {
+     .jb-image img,
+     #about_us img {
          display: block;
          margin: auto;
          width: 18em;
@@ -131,15 +132,17 @@
 
      }
 
+
+
      #presale .container>div:first-of-type div {
          margin-left: 1.5em !important;
          padding-left: 1.5em !important;
      }
 
-     #presale p {
-         margin-bottom: 0;
-     }
+
+
  }
+
 
 
  /* Small devices (landscape phones, 576px and up) */
