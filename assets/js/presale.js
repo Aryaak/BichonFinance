@@ -1,6 +1,6 @@
 let presaleEnd = false;
 const currentUrl = window.location.href.split('/')[window.location.href.split('/').length -1];
-const endDate = new Date("2021-06-30 23:59:00".replace(/-/g,"/"));
+const endDate = new Date("2021-06-05 23:59:00".replace(/-/g,"/"));
 const now = new Date();
 
 if (now >= endDate){
