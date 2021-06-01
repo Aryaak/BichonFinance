@@ -50,7 +50,7 @@
      }
 
      .page {
-         margin-bottom: 0.8em;
+         margin-bottom: 0.2em;
      }
 
      .page-title {
@@ -140,6 +140,13 @@
      }
 
 
+     #about_us,
+     #roadmap,
+     #presale,
+     #token {
+         padding-top: 0;
+         margin-bottom: 5em !important;
+     }
 
  }
 
