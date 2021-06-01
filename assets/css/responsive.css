@@ -127,6 +127,10 @@
          margin-left: auto;
      }
 
+     #presale button.btn-secondary {
+         text-indent: -15vw;
+     }
+
      #presale .container>div:first-of-type {
          margin-bottom: 20px;
      }
