@@ -60,6 +60,11 @@ html {
     font-weight: bold;
 }
 
+.input-group .form-control:focus {
+    box-shadow: 0 0 2px 2px black !important;
+    border: 1px solid black !important;
+}
+
 /* End Bootstrap Replace */
 
 /* Loading Style */

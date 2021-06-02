@@ -74,10 +74,13 @@
                     <h2 class="text-center mb-4">Buy Bichon Token now!</h2>
                     <div class="ms-5 ps-5">
                         <small class="mb-3">Get it now while it's cheap!</small><br>
-                        <button class="btn btn-secondary w-50"><small>0.01</small></button><br>
+                        <div class="input-group mt-2">
+                            <input id="tokenValue" value="0.1" min="0" type="number" class="form-control"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                        </div><br>
                         <small class="mb-3">Minimum buy 0.01 BNB - 100.000.000.000 BCHF</small><br>
                         <small>Minimum buy 0.01 BNB - 100.000.000.000 BCHF</small><br>
-                        <button class="btn btn-primary mt-3 text-light w-50">Buy</button>
+                        <button id="buyButton" class="btn btn-primary mt-3 text-light w-50">Buy</button>
                     </div>
 
                 </div>
@@ -160,6 +163,26 @@
         });
     </script>
     <script src="./assets/js/presale.js"></script>
+    <script>
+        const tokenValue = document.getElementById('tokenValue');
+        const buyButton = document.getElementById('buyButton');
+        tokenValue.addEventListener('keyup', function () {
+            if (tokenValue.value < 0.1) {
+                buyButton.style.display = 'none';
+            } else {
+                buyButton.style.display = 'inherit';
+
+            }
+        })
+        tokenValue.addEventListener('change', function () {
+            if (tokenValue.value < 0.1) {
+                buyButton.style.display = 'none';
+            } else {
+                buyButton.style.display = 'inherit';
+
+            }
+        })
+    </script>
 
 </body>
 
